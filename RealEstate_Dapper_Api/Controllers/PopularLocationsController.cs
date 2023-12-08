@@ -15,12 +15,14 @@ namespace RealEstate_Dapper_Api.Controllers
         {
             _locationRepository = locationRepository;
         }
+       
         [HttpGet]
         public async Task<IActionResult> PopularLocationList()
         {
             var value =await _locationRepository.GetAllPopularLocationAsync();
             return Ok(value);
         }
+
         [HttpPost]
         public async Task<IActionResult> CreatePopularLocation(CreatePopularLocationDto createPopularLocationDto)
         {

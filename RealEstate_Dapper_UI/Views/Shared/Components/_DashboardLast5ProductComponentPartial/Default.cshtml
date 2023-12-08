@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿@model List<ResultLast5ProductWithCategoryDto>
-=======
-﻿@model List<ResultProductDto>
->>>>>>> e19b9c73fae3a616f8c70e3563c3b8a4bf7ad627
 @{
     int count = 0;
 }
@@ -26,26 +22,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
+                    @foreach(var item in Model)
                     {
                         count++;
                         <tr>
-                            <td>@count</td>
-<<<<<<< HEAD
-                            <td>@(((DateTime)item.AdvertisementDate).ToString("dd-MMM-yyyy"))</td>
-                            <td>@item.Title</td>
-                            <td>@item.City-@item.District</td>
-                            <td>@item.CategoryName</td>
-                            <td>@item.Price ₺</td>
-=======
-                            <td>00.00.0000</td>
-                            <td>@item.title</td>
-                            <td>@item.city-@item.district</td>
-                            <td>@item.categoryName</td>
-                            <td>@item.price</td>
->>>>>>> e19b9c73fae3a616f8c70e3563c3b8a4bf7ad627
-                            <td><a class="btn btn-sm btn-primary" href="">İlanı Gör</a></td>
-                        </tr>
+                        <td>@count</td>
+                        <td>@(((DateTime)item.AdvertisementDate).ToString("dd-MMM-yyyy"))</td>
+                        <td>@item.Title</td>
+                        <td>@item.City-@item.District</td>
+                        <td>@item.CategoryName</td>
+                        <td>@item.Price ₺</td>
+                        <td><a class="btn btn-sm btn-primary" href="">İlanı Gör</a></td>
+                    </tr>
                     }
                 </tbody>
             </table>

@@ -18,10 +18,9 @@ namespace RealEstate_Dapper_Api.Repositories.BottomGridRepositories
         {
             string query = "insert into BottomGrid (Icon,Title,Description) values (@icon,@title,@description)";
             var parameters = new DynamicParameters();
-            parameters.Add("@icon",createBottomGridDto.Icon);
+            parameters.Add("@icon", createBottomGridDto.Icon);
             parameters.Add("@title", createBottomGridDto.Title);
             parameters.Add("@description", createBottomGridDto.Description);
-            
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query, parameters);

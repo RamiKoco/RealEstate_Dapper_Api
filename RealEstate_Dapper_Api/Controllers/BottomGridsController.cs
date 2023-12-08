@@ -21,6 +21,7 @@ namespace RealEstate_Dapper_Api.Controllers
             var values = await _bottomGridRepository.GetAllBottomGridAsync();
             return Ok(values);
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateBottomGrid(CreateBottomGridDto createBottomGridDto)
         {
