@@ -17,7 +17,7 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpGet("GetLast4Contact")]
         public async Task<IActionResult> GetLast4Contact()
         {
-            var values = await _contactRepository.GetLast4Contact();
+            var values =await _contactRepository.GetLast4Contact();
             return Ok(values);
         }
     }

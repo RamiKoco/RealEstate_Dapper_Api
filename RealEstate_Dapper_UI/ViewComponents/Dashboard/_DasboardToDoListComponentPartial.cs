@@ -4,7 +4,7 @@ using RealEstate_Dapper_UI.Dtos.ToDoListDtos;
 
 namespace RealEstate_Dapper_UI.ViewComponents.Dashboard
 {
-    public class _DasboardToDoListComponentPartial : ViewComponent
+    public class _DasboardToDoListComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _DasboardToDoListComponentPartial(IHttpClientFactory httpClientFactory)
