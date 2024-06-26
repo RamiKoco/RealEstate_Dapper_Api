@@ -36,7 +36,8 @@ namespace RealEstate_Dapper_UI.Controllers
             var client4 = _httpClientFactory.CreateClient();
             var responseMessage4 = await client4.GetAsync("https://localhost:44333/api/Statistics/AverageProductPriceByRent");
             var jsonData4 = await responseMessage4.Content.ReadAsStringAsync();
-            ViewBag.averageProductPriceByRent = jsonData4;
+            //ViewBag.averageProductPriceByRent = jsonData4;
+            ViewBag.averageProductPriceByRent = (decimal.Parse(jsonData4.Replace(".", "")) / 1000000m).ToString("N2");
             #endregion
 
             #region Statistics5

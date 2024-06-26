@@ -1,0 +1,8 @@
+﻿appsetting.json → veritabanı bağlantısı 
+Models → DapperContext → Context
+Dtos → Create, Update, Result and Delete Dtos with DB Query
+Repositories → Interface + Class
+Program.cs Builder.Services.AddTransient...
+Controller → add razor views
+
+
